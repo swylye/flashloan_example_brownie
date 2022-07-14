@@ -1,0 +1,24 @@
+dependencies:
+  # - <organization/repo>@<version>
+  - OpenZeppelin/openzeppelin-contracts@4.6.0
+  - aave/aave-v3-core@1.16.0
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.6.0'
+      - '@aave=aave/aave-v3-core@1.16.0'
+dotenv: .env
+networks:
+  default: polygon-main-fork
+  polygon-main-fork:
+    dai_token_address: '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063'
+    dai_whale_address: '0xdfD74E3752c187c4BA899756238C76cbEEfa954B'
+    dai_pool_address: '0xa97684ead0e402dc232d5a977953df7ecbab3cdb'
+    verify: False
+  mainnet-fork:
+    verify: False
+wallets:
+  DEV00: ${PRIVATE_KEY_0}
+  DEV01: ${PRIVATE_KEY_1}
+  DEV02: ${PRIVATE_KEY_2}
+  DEV03: ${PRIVATE_KEY_3}
